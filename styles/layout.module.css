@@ -1,0 +1,34 @@
+.container {
+  max-width: 80%;
+  padding: 0 1rem;
+  margin: 3rem auto 6rem;
+  border: 3px dotted darkcyan;
+  display: grid;
+  grid-template: [header-left] "header header" 30px [header-right]
+                 [nav-left] "nav main" 1fr [nav-right]
+                 [main-left] "nav  main" 1fr [main-right]
+                 [footer-left] "footer  footer" 30px [footer-right]
+                 / 120px 1fr;
+}
+
+.header {
+  display: flex;
+  padding: 0 1rem;
+  align-items: center;
+  border: 3px dotted darkcyan;
+  grid-area: header;
+}
+
+.nav {
+  grid-area: nav;
+}
+
+.main {
+  grid-area: main;
+}
+
+.footer {
+  font: italic small-caps 16px/2 cursive;
+  text-align: center;
+  grid-area: footer;
+}

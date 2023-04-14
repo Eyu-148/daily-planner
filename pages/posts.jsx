@@ -3,17 +3,15 @@ import React from "react";
 import Head from "next/head";
 import Layout from "../components/layout";
 
-export default function Home() {
+export default function Posts() {
     return (
         <>
-        <Layout isHome={true}>
+        <Layout isHome={false}>
             <Head>
-                <title>Daily Planner - a next app</title>
+                <title>Daily Planner - Posts</title>
                 <link rel="icon" href="/favicon.ico" />
             </Head>
-            <div>
-                <p>Hello, next.js!</p>
-            </div>
+            <h1>Your Posts</h1>
         </Layout>
         </>
     )
