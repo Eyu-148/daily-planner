@@ -1,9 +1,11 @@
 // @ts-check
 import React from "react";
 import Head from "next/head";
-import Layout from "../components/layout";
+import Layout from "../components/global-layout";
 
 export default function Home() {
+    
+
     return (
         <>
         <Layout isHome={true}>
@@ -12,7 +14,9 @@ export default function Home() {
                 <link rel="icon" href="/favicon.ico" />
             </Head>
             <div>
-                <p>Hello, next.js!</p>
+                <h1>There should be some text...</h1>
+                <h1>There should be some text...</h1>
+                <h1>There should be some text...</h1>
             </div>
         </Layout>
         </>

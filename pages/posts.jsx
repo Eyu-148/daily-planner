@@ -1,7 +1,7 @@
 // @ts-check
 import React from "react";
 import Head from "next/head";
-import Layout from "../components/layout";
+import Layout from "../components/global-layout";
 
 export default function Posts() {
     return (

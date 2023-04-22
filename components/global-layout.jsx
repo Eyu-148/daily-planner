@@ -1,11 +1,4 @@
-/**
- * @typedef {{
-*  isHome: boolean
-* }}
-* Props
-* 
-* @type React.FunctionComponent<Props>
-*/
+//@ts-check
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -14,8 +7,17 @@ import utilStyle from '../styles/utils.module.css'
 
 const name = "Your Name";
 
-
-export default function Layout({ children, isHome }) {
+/**
+ * @typedef {{
+ * children: React.ReactNode,
+ * isHome?: boolean
+ * }} Props
+ * 
+ * @type {React.FunctionComponent<Props>}
+ * @param {Props} props
+ * @return {React.ReactElement}
+*/
+export default function Layout(props) {
     return (
         <>
             <div className={styles.container}>
@@ -30,13 +32,13 @@ export default function Layout({ children, isHome }) {
                     <h1 className={utilStyle.headingLg}>Hello, {name}</h1>
                 </header>
                 <nav className={styles.nav}>
-                    <ol>
+                    <ul className={styles.ul}>
                         <li><Link href="/">Home</Link></li>
                         <li><Link href="/budget">Budget</Link></li>
                         <li><Link href="/posts">Daily Posts</Link></li>
-                    </ol>
+                    </ul>
                 </nav>
-                <main className={styles.main}>{children}</main>
+                <main className={styles.main}>{props.children}</main>
                 <footer className={styles.footer}>Delivered by 坐着就是跟你唠</footer>
             </div>
         </>
