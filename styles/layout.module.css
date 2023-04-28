@@ -2,7 +2,9 @@
   max-width: 80%;
   padding: 0 1rem;
   margin: 3rem auto 6rem;
-  border: 3px dotted darkcyan;
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 12px;
+  box-shadow: 0 0 25px 10px rgb(173, 216, 230, 0.5);
   display: grid;
   grid-template-columns: repeat(7, 1fr);
   grid-auto-rows: minmax(100px, auto);
@@ -12,15 +14,19 @@
 }
 
 .header {
-  display: flex;
-  align-items: center;
-  border: 3px dotted darkcyan;
   grid-area: hd;
+  border-bottom: 2px solid rgba(77, 84, 88, 0.5);
+}
+
+.headerHeading1 {
+  float: right;
+  font-family: 'Indie Flower';
+  font-size: 130px;
+  margin: 2rem;
 }
 
 .nav {
   grid-area: nav;
-  ;
 }
 
 .main {
@@ -35,5 +41,15 @@
 
 .ul {
   list-style: none;
+  padding: 0 1rem;
 }
 
+.navLi {
+  padding: 10px 5px;
+  font-family: 'Lilita One';
+  border-left: 5px solid rgb(46, 177, 233);
+}
+
+.navLi:hover {
+  border-left: 5px solid rgb(11, 49, 138);
+}

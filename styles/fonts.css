@@ -1,0 +1,15 @@
+@font-face {
+    font-family: 'Lilita One';
+    src: url('../public/Fonts/Lilita\ One/LilitaOne.eot'), 
+         url('../public/Fonts/Lilita\ One/LilitaOne.ttf') format('truetype'),
+         url('../public/Fonts/Lilita\ One/LilitaOne.svg') format('svg'),
+         url('../public/Fonts/Lilita\ One/LilitaOne.woff') format('woff');
+  }
+  
+  @font-face {
+    font-family: 'Indie Flower';
+    src: url('../public/Fonts/Indie\ Flower/IndieFlower.eot'), 
+         url('../public/Fonts/Indie\ Flower/IndieFlower.ttf') format('truetype'),
+         url('../public/Fonts/Indie\ Flower/IndieFlower.svg') format('svg'),
+         url('../public/Fonts/Indie\ Flower/IndieFlower.woff') format('woff');
+  }

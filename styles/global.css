@@ -1,3 +1,4 @@
+
 html,
 body {
   padding: 0;
@@ -7,8 +8,16 @@ body {
   line-height: 1.6;
   font-size: 18px;
   height: auto;
-  width: auto;
+  width: 100%;
 }
+
+body {
+  margin: 0;
+  padding: 0;
+  background-image: linear-gradient(to right, #eea2a2 0%, #bbc1bf 19%, #57c6e1 42%, #b49fda 79%, #7ac5d8 100%);
+}
+
+
 
 * {
   box-sizing: border-box;
@@ -16,6 +25,7 @@ body {
 
 a {
   color: #0070f3;
+  font-size: larger;
   text-decoration: none;
 }
 
@@ -25,12 +35,5 @@ a:hover {
 
 img {
   max-width: 100%;
-  display: block;
-}
-
-canvas {
-  border: 2px solid #0070f3;
-  width: 80%;
-  margin: 0 auto;
   display: block;
 }
