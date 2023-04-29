@@ -1,0 +1,25 @@
+.postContainer {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 1fr 1fr 2fr;
+  grid-template-areas: "d  o"
+                       "p  o"
+                       "de de";
+}
+
+.postDate {
+    grid-area: d;
+}
+
+.postOperation {
+    grid-area: o;
+    text-align: right;
+}
+
+.postPrice {
+    grid-area: p;
+}
+
+.postDetails {
+    grid-area: de;
+}

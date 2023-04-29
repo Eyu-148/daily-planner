@@ -1,0 +1,10 @@
+.budgetForm {
+    display: flex;
+}
+
+.budgetButton {
+    margin: 0 1rem;
+    padding: 1% 1rem;
+    border: 2px solid rgb(46, 177, 233);
+    border-radius: 7px;
+}

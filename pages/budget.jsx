@@ -3,6 +3,7 @@ import React from "react";
 import Head from "next/head";
 import Layout from "../components/global-layout";
 import BudgetGraph from "../components/budget-graph";
+import BudgetForm from "../components/budget-form";
 
 export default function Budget() {
     // test dataset
@@ -23,14 +24,15 @@ export default function Budget() {
     return (
         <Layout isHome={false}>
             <Head>
-                <title>Budget</title>
+                <title>Visualization</title>
                 <link rel="icon" href="/favicon.ico" />
             </Head>
-            <BudgetGraph 
+            <BudgetGraph
                 title={graphTitle} 
                 xData={lineChartData.xData} 
                 seriesData={lineChartData.seriesData}
             />
+            <BudgetForm />
         </Layout>
     )
 }

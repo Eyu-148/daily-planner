@@ -7,7 +7,7 @@
   box-shadow: 0 0 25px 10px rgb(173, 216, 230, 0.5);
   display: grid;
   grid-template-columns: repeat(7, 1fr);
-  grid-auto-rows: minmax(100px, auto);
+  grid-template-rows: 1fr 5fr 1fr;
   grid-template-areas: "hd  hd  hd   hd   hd   hd   hd"
                        "nav nav main main main main main"
                        "ft  ft  ft   ft   ft   ft   ft";
@@ -21,8 +21,6 @@
 .headerHeading1 {
   float: right;
   font-family: 'Indie Flower';
-  font-size: 130px;
-  margin: 2rem;
 }
 
 .nav {
@@ -30,12 +28,15 @@
 }
 
 .main {
+  margin: 2rem;
   grid-area: main;
 }
 
 .footer {
   font: italic small-caps 16px/2 cursive;
   text-align: center;
+  padding: 1rem;
+  border-top: 2px solid rgba(77, 84, 88, 0.5);
   grid-area: ft;
 }
 

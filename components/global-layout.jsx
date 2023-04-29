@@ -29,13 +29,13 @@ export default function Layout(props) {
                     />
                 </Head>
                 <header className={styles.header}>
-                    <h1 className={`${utilStyle.headingLg} ${styles.headerHeading1}`}>Hello, {name}</h1>
+                    <h1 className={`${styles.headerHeading1} ${utilStyle.headingLg}`}>Hello, {name}</h1>
                 </header>
                 <nav className={styles.nav}>
                     <ul className={styles.ul}>
                         <li className={styles.navLi}><Link href="/">Home</Link></li>
-                        <li className={styles.navLi}><Link href="/budget">Budget</Link></li>
-                        <li className={styles.navLi}><Link href="/posts">Daily Posts</Link></li>
+                        <li className={styles.navLi}><Link href="/budget">Budget View</Link></li>
+                        <li className={styles.navLi}><Link href="/posts">Budget Details</Link></li>
                     </ul>
                 </nav>
                 <main className={styles.main}>{props.children}</main>
