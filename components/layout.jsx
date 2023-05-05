@@ -34,8 +34,8 @@ export default function Layout(props) {
                 <nav className={styles.nav}>
                     <ul className={styles.ul}>
                         <li className={styles.navLi}><Link href="/">Home</Link></li>
-                        <li className={styles.navLi}><Link href="/budget">Budget View</Link></li>
-                        <li className={styles.navLi}><Link href="/posts">Budget Details</Link></li>
+                        <li className={styles.navLi}><Link href="/visual/">Budget View</Link></li>
+                        <li className={styles.navLi}><Link href="/posts/">Budget Details</Link></li>
                     </ul>
                 </nav>
                 <main className={styles.main}>{props.children}</main>

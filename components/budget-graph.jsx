@@ -1,6 +1,7 @@
 //@ts-check
 import React, { useEffect, useRef } from "react";
 import * as echarts from "echarts";
+import chartStyles from '../styles/budget.module.css'
 
 /**
  * component to display a chart, data sending from server
@@ -43,5 +44,5 @@ export default function BudgetGraph(props) {
         chart.setOption(option);
     },[props]);
 
-    return <div ref={graphRef} id="budget-chart1" style={{width: 600, height: 400}}></div>;
+    return <div ref={graphRef} id="budget-chart1" style={{width: 650, height: 450}}></div>;
 }

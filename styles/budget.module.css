@@ -8,3 +8,8 @@
     border: 2px solid rgb(46, 177, 233);
     border-radius: 7px;
 }
+
+.budgetChart {
+    background-color: rgb(240, 248, 255, 0.5);
+    box-shadow: 10px 10px 25px 10px rgba(104, 132, 141, 0.5);
+}

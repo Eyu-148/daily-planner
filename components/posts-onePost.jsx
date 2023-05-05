@@ -6,10 +6,10 @@ import postStyles from '../styles/posts.module.css';
 /**
  * component to display a chart, data sending from server
  * @typedef {{
+ * id: number,
  * date: string,
- * isPay: boolean,
  * price: number,
- * details: string
+ * notes: string
  * }} Props
  * 
  * @type {React.FC<Props>}
@@ -18,14 +18,14 @@ import postStyles from '../styles/posts.module.css';
 **/
 
 export default function OnePost(props) {
-    const operation = (props.isPay) ? "支出" : "收入";
 
     return (
         <div className={postStyles.postContainer}>
-            <h4 className={postStyles.postDate}>{props.date}</h4>
-            <h1 className={`${utilStyles.headingLg} ${postStyles.postOperation}`}>{operation}</h1>
-            <h2 className={`${utilStyles.headingMd} ${postStyles.postPrice}`}>{props.price}</h2>
-            <p className={postStyles.postDetails}>{props.details}</p>
+            <div className={postStyles.postInfo}>
+                <h4 className={postStyles.postDate}>{props.date}</h4>
+                <h2 className={`${utilStyles.headingLg} ${postStyles.postPrice}`}>{props.price}</h2>
+            </div>
+            <p className={postStyles.postDetails}>{props.notes}</p>
         </div>
     );
 }

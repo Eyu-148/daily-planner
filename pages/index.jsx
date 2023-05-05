@@ -1,7 +1,8 @@
 // @ts-check
 import React from "react";
 import Head from "next/head";
-import Layout from "../components/global-layout";
+import Image from "next/image";
+import Layout from "../components/layout";
 
 export default function Home() {
     
@@ -10,13 +11,14 @@ export default function Home() {
         <>
         <Layout isHome={true}>
             <Head>
-                <title>Daily Planner - a next app</title>
+                <title>Budget Manager-a next app</title>
                 <link rel="icon" href="/favicon.ico" />
             </Head>
             <div>
-                <h1>There should be some text...</h1>
-                <h1>There should be some text...</h1>
-                <h1>There should be some text...</h1>
+                <Image src="/../public/premium_photo-1665657351698-7d61f4b57ddc"
+                       alt="a table topped with a vase and a net"
+                       width={300}
+                       height={200} />
             </div>
         </Layout>
         </>

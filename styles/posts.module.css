@@ -1,25 +1,32 @@
 .postContainer {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: 1fr 1fr 2fr;
-  grid-template-areas: "d  o"
-                       "p  o"
-                       "de de";
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: "info   info"
+                         "detail detail";
+    background-color: rgb(240, 248, 255, 0.5);
+    box-shadow: 10px 10px 25px 10px rgba(104, 132, 141, 0.5);
+    border-radius: 6px;
+    margin: 1rem 0;
+}
+
+.postInfo {
+    grid-area: info;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
 
 .postDate {
-    grid-area: d;
-}
-
-.postOperation {
-    grid-area: o;
-    text-align: right;
+    padding-left: 1rem;
 }
 
 .postPrice {
-    grid-area: p;
+    padding-left: 1rem;
+    margin-right: 2rem;
 }
 
 .postDetails {
-    grid-area: de;
+    grid-area: detail;
+    padding-left: 1rem;
 }

@@ -1,9 +1,11 @@
 // @ts-check
 import React from "react";
 import Head from "next/head";
-import Layout from "../components/global-layout";
-import BudgetGraph from "../components/budget-graph";
-import BudgetForm from "../components/budget-form";
+import Layout from "../../components/layout";
+import BudgetGraph from "../../components/budget-graph";
+import BudgetForm from "../../components/budget-form";
+import chartStyles from '../../styles/budget.module.css'
+
 
 export default function Budget() {
     // test dataset
@@ -27,12 +29,14 @@ export default function Budget() {
                 <title>Visualization</title>
                 <link rel="icon" href="/favicon.ico" />
             </Head>
-            <BudgetGraph
-                title={graphTitle} 
-                xData={lineChartData.xData} 
-                seriesData={lineChartData.seriesData}
-            />
-            <BudgetForm />
+            <div className={chartStyles.budgetChart}>
+                <BudgetGraph
+                    title={graphTitle} 
+                    xData={lineChartData.xData} 
+                    seriesData={lineChartData.seriesData}
+                />
+                <BudgetForm />
+            </div>
         </Layout>
     )
 }
