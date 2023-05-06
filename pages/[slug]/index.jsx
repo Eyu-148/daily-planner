@@ -4,6 +4,7 @@ import Head from "next/head";
 import { useRouter } from "next/router";
 import Layout from "../../components/layout";
 import OnePost from "../../components/posts-onePost";
+import PostDetails from "../../components/post-detail";
 import postStyles from '../../styles/posts.module.css';
 
 // some dumb data
@@ -28,7 +29,8 @@ const BUDGET_POSTS = [
     }
 ]
 
-export default function Posts() {
+
+export default function PostNotes() {
     const router = useRouter()
     const postMap = new Map()
 
@@ -46,12 +48,12 @@ export default function Posts() {
             }
         })
     }, [postMap])
-    
+
     return (
         <>
         <Layout isHome={false}>
             <Head>
-                <title>Daily Planner - Posts</title>
+                <title>Daily Details</title>
                 <link rel="icon" href="/favicon.ico" />
             </Head>
             <div>
@@ -59,14 +61,26 @@ export default function Posts() {
                     New
                 </button>
             </div>
+
             {Array.from(postMap).map(([key, val]) => (
-                <button key={key} onClick={() => onNavigate(`${key}`)} className={postStyles.postBtn}>
-                <OnePost 
-                    date={key} 
-                    price={val} 
-                />
+                <button key={key} className={postStyles.postBtn}>
+                    <OnePost date={key} price={val} 
+                    />
                 </button>
             ))}
+
+            <div className={postStyles.post}>
+                <div className={postStyles.postPage}>
+                    <div>
+                        <button onClick={()=>onNavigate(`posts`)}>X</button> 
+                    </div>
+                    {BUDGET_POSTS.filter((post) => post.date === router.query.slug).map((post) => (
+                        <div key={post.id}>
+                            <PostDetails date={post.date} price={post.price} notes={post.notes} />
+                        </div> 
+                    ))}
+                </div>
+            </div>
 
         </Layout>
         </>

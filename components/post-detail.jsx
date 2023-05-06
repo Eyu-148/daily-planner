@@ -8,6 +8,7 @@ import postStyles from '../styles/posts.module.css';
  * @typedef {{
  * date: string,
  * price: number,
+ * notes: string,
  * }} Props
  * 
  * @type {React.FC<Props>}
@@ -15,12 +16,12 @@ import postStyles from '../styles/posts.module.css';
  * @return {React.ReactElement}
 **/
 
-export default function OnePost(props) {
-
+export default function PostDetails(props) {
     return (
-        <div className={postStyles.postContainer}>
+        <div className={postStyles.postDetails}>
             <h4 className={postStyles.postDate}>{props.date}</h4>
             <h2 className={`${utilStyles.headingLg} ${postStyles.postPrice}`}>{props.price}</h2>
+            <p>{props.notes}</p>
         </div>
-    );
+    )
 }
