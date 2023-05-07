@@ -1,6 +1,7 @@
 // @ts-check
 import React, { useEffect, useMemo } from "react";
 import Head from "next/head";
+import Image from "next/image";
 import { useRouter } from "next/router";
 import Layout from "../../components/layout";
 import OnePost from "../../components/posts-onePost";
@@ -72,7 +73,7 @@ export default function PostNotes() {
             <div className={postStyles.post}>
                 <div className={postStyles.postPage}>
                     <div>
-                        <button onClick={()=>onNavigate(`posts`)}>X</button> 
+                        <button className={postStyles.closeBtn} onClick={()=>onNavigate(`posts`)} />
                     </div>
                     {BUDGET_POSTS.filter((post) => post.date === router.query.slug).map((post) => (
                         <div key={post.id}>
