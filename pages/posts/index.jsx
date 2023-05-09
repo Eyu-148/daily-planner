@@ -5,28 +5,8 @@ import { useRouter } from "next/router";
 import Layout from "../../components/layout";
 import OnePost from "../../components/posts-onePost";
 import postStyles from '../../styles/posts.module.css';
+import { BUDGET_POSTS } from "../../public/data/text_data";
 
-// some dumb data
-const BUDGET_POSTS = [
-    {
-        id: 1,
-        date: '2023-5-5',
-        price: -50,
-        notes: "sunflower swimming suit~"
-    },
-    {
-        id: 2,
-        date: '2023-5-5',
-        price: 200,
-        notes: "卖了条裙子^-^"
-    },
-    {
-        id: 3,
-        date: '2023-5-7',
-        price: -15,
-        notes: "boba tea"
-    }
-]
 
 export default function Posts() {
     const router = useRouter()
@@ -62,12 +42,15 @@ export default function Posts() {
                 <link rel="icon" href="/favicon.ico" />
             </Head>
             <div>
-                <button>
+                <button type="button" onClick={() => onNavigate(`add_budget`)}>
                     New
                 </button>
             </div>
             {Array.from(postMap).map(([key, val]) => (
-                <button key={key} onClick={() => onNavigate(`${key}`)} className={postStyles.postBtn}>
+                <button type="button" 
+                        key={key} 
+                        onClick={() => onNavigate(`${key}`)} 
+                        className="bg-postBtn-default border:none rounded-md shadow-md mx-0 my-4 w-4/5 h-1/3 ease-in-out duration-300">
                 <OnePost 
                     date={key} 
                     price={val} 

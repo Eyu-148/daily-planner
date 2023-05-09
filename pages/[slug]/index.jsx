@@ -7,29 +7,7 @@ import Layout from "../../components/layout";
 import OnePost from "../../components/posts-onePost";
 import PostDetails from "../../components/post-detail";
 import postStyles from '../../styles/posts.module.css';
-
-// some dumb data
-const BUDGET_POSTS = [
-    {
-        id: 1,
-        date: '2023-5-5',
-        price: -50,
-        notes: "sunflower swimming suit~"
-    },
-    {
-        id: 2,
-        date: '2023-5-5',
-        price: 200,
-        notes: "卖了条裙子^-^"
-    },
-    {
-        id: 3,
-        date: '2023-5-7',
-        price: -15,
-        notes: "boba tea"
-    }
-]
-
+import { BUDGET_POSTS } from "../../public/data/text_data";
 
 export default function PostNotes() {
     const router = useRouter()
@@ -64,16 +42,18 @@ export default function PostNotes() {
             </div>
 
             {Array.from(postMap).map(([key, val]) => (
-                <button key={key} className={postStyles.postBtn}>
+                <button key={key} className="bg-postBtn-default border:none rounded-md shadow-md mx-0 my-4 w-4/5 h-1/3 ease-in-out duration-300">
                     <OnePost date={key} price={val} 
                     />
                 </button>
             ))}
 
-            <div className={postStyles.post}>
-                <div className={postStyles.postPage}>
+            <div className="bg-slate-800/30 fixed overflow-auto bottom-0 top-0 right-0 left-0 z-10">
+                <div className="p-8 mt-15">
                     <div>
-                        <button className={postStyles.closeBtn} onClick={()=>onNavigate(`posts`)} />
+                        <button 
+                            className="ml-10 bg-transparent border-none p-1 before:content-close"
+                            onClick={()=>onNavigate(`posts`)} />
                     </div>
                     {BUDGET_POSTS.filter((post) => post.date === router.query.slug).map((post) => (
                         <div key={post.id}>
