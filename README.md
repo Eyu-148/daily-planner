@@ -11,3 +11,5 @@ Next.js初试，目标是搭建一个多网页网站前端，包括home page，�
 5/5: 初步完成post页的UI，下一步是使用useRoute
 
 事实证明不管是module CSS or tailwind CSS, 写类名永远是最麻烦的事情:V
+
+5/15更新心得：自学简直磨磨唧唧，事实证明与其花大把时间磕UI设计，不如直接照抄
