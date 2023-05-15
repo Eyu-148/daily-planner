@@ -1,7 +1,7 @@
 //@ts-check
 import React, { useEffect, useRef } from "react";
-import utilStyles from '../styles/utils.module.css'
-import postStyles from '../styles/posts.module.css';
+import utilStyles from '../../styles/utils.module.css'
+import postStyles from '../../styles/posts.module.css';
 
 /**
  * component to display a chart, data sending from server
@@ -18,9 +18,9 @@ import postStyles from '../styles/posts.module.css';
 export default function OnePost(props) {
 
     return (
-        <div className={postStyles.postContainer}>
-            <h4 className={postStyles.postDate}>{props.date}</h4>
-            <h2 className={`${utilStyles.headingLg} ${postStyles.postPrice}`}>{props.price}</h2>
-        </div>
+        <>
+            <h4 className='font-medium text-base text-sky-700'>{props.date}</h4>
+            <h2 className='font-bold text-2xl text-sky-950'>{props.price}</h2>
+        </>
     );
 }

@@ -17,5 +17,23 @@ export const BUDGET_POSTS = [
         date: '2023-5-7',
         price: -15,
         notes: "boba tea"
-    }
+    },
+    {
+        id: 4,
+        date: '2023-5-14',
+        price: -17.9,
+        notes: "买菜"
+    },
+    {
+        id: 5,
+        date: '2023-5-14',
+        price: 30,
+        notes: "闲鱼"
+    },
+    {
+        id: 6,
+        date: '2023-5-22',
+        price: -302,
+        notes: "鞋子"
+    },
 ]

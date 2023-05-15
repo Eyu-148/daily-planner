@@ -16,11 +16,8 @@ body {
 }
 
 body {
-  margin: 0;
-  padding: 0;
-  background-image: linear-gradient(to right, #eea2a2 0%, #bbc1bf 19%, #57c6e1 42%, #b49fda 79%, #7ac5d8 100%);
+  background-image: linear-gradient(to top, #fff1eb 0%, #ace0f9 100%);
 }
-
 
 
 * {
@@ -28,7 +25,6 @@ body {
 }
 
 a {
-  color: #0070f3;
   font-size: larger;
   text-decoration: none;
 }

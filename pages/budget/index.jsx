@@ -3,7 +3,7 @@ import React from "react";
 import Head from "next/head";
 import Layout from "../../components/layout";
 import BudgetGraph from "../../components/budget-graph";
-import BudgetForm from "../../components/budget-form";
+import BudgetForm from "../../components/forms/form-filterButtons";
 import chartStyles from '../../styles/budget.module.css'
 
 
@@ -29,7 +29,7 @@ export default function Budget() {
                 <title>Visualization</title>
                 <link rel="icon" href="/favicon.ico" />
             </Head>
-            <div className={chartStyles.budgetChart}>
+            <div className='flex flex-col items-center justify-center space-x-5 my-3'>
                 <BudgetGraph
                     title={graphTitle} 
                     xData={lineChartData.xData} 

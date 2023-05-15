@@ -44,5 +44,5 @@ export default function BudgetGraph(props) {
         chart.setOption(option);
     },[props]);
 
-    return <div ref={graphRef} id="budget-chart1" style={{width: 650, height: 450}}></div>;
+    return <div className="flex items-center space-x-9" ref={graphRef} id="budget-chart1" style={{width: 650, height: 450}}></div>;
 }

@@ -2,10 +2,20 @@
 import React from "react";
 import DateInputBox from "./input-date";
 
-export default function InputFieldBudget() {
+/**
+ * @typedef {{
+* id:number,
+* }} Props
+* 
+* @type {React.FC<Props>}
+* @param {Props} props
+* @return {React.ReactElement}
+*/
+
+export default function InputFieldBudget(props) {
     return (
         <fieldset className="border-2 border-gray-100 rounded-md p-7">
-            <legend>budget#1</legend>
+            <legend className="uppercase font-bold">{`budget#${props.id}`}</legend>
             <DateInputBox />
 
             <div className="flex flex-auto mt-5 focus-within:font-bold">
