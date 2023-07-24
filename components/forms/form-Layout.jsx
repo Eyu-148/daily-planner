@@ -23,17 +23,23 @@ export default function FormLayout() {
         console.log(inputs)
     }
 
+    const handleReset = () => {
+        inputRef.current = 0
+        setInputs([])
+    }
+
 
     return (
-        <form method="post" className="mt-10">
+        <form method="post">
             <div>{ inputs }</div>
-            <div className="flex flex-row ml-36 mt-5">
+            <div className="flex flex-row items-center justify-center mt-5">
                 <button type='submit' className="mx-5 border-2 border-green-400 rounded-md px-3 py-2 uppercase 
                                             hover:bg-green-400 hover:text-white">
                     submit
                 </button>
                 <button type='reset' className="mx-5 border-2 border-green-400 rounded-md px-3 py-2 uppercase 
-                                            hover:bg-green-400 hover:text-white">
+                                            hover:bg-green-400 hover:text-white"
+                        onClick={handleReset}>
                     reset
                 </button>
                 <button type='button' className="mx-5 border-2 border-green-400 rounded-md px-3 py-2 uppercase 

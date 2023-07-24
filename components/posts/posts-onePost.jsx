@@ -1,7 +1,5 @@
 //@ts-check
 import React, { useEffect, useRef } from "react";
-import utilStyles from '../../styles/utils.module.css'
-import postStyles from '../../styles/posts.module.css';
 
 /**
  * component to display a chart, data sending from server

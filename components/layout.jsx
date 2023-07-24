@@ -20,7 +20,7 @@ const name = "曹";
 export default function Layout(props) {
     return (
         <>
-            <div className="grid gap-5 grid-rows-7 m-10 mx-40">
+            <div className="grid gap-5 grid-rows-7 m-10 mx-40 overflow-auto">
                 <Head>
                     <link rel="icon" href="/favicon.ico" />
                     <meta
@@ -36,12 +36,7 @@ export default function Layout(props) {
                         <li className='flex items-center justify-center bg-blue-500 hover:bg-white rounded-md text-white hover:text-blue-500 
                                        py-2 px-4 border-2 border-transparent hover:border-blue-500
                                        ease-in-out duration-300'>
-                            <Link href="/">Home</Link>
-                        </li>
-                        <li className='flex items-center justify-center bg-blue-500 hover:bg-white rounded-md text-white hover:text-blue-500 
-                                       py-2 px-4 border-2 border-transparent hover:border-blue-500
-                                       ease-in-out duration-300'>
-                                        <Link href="/budget/">Budget View</Link>
+                                        <Link href="/">Budget View</Link>
                         </li>
                         <li className='flex items-center justify-center bg-blue-500 hover:bg-white rounded-md text-white hover:text-blue-500 
                                        py-2 px-4 border-2 border-transparent hover:border-blue-500

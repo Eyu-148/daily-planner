@@ -7,7 +7,7 @@ import { BUDGET_POSTS } from "../../public/data/text_data";
 
 /**
  * @typedef {{
-* isDelete:boolean
+* isDelete:boolean,
 * }} Props
 * 
 * @type {React.FC<Props>}
